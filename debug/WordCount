@@ -1,0 +1,960 @@
+14/10/18 08:37:14 ERROR security.UserGroupInformation: PriviledgedActionException as:guilin cause:org.apache.hadoop.security.AccessControlException: org.apache.hadoop.security.AccessControlException: Permission denied: user=guilin, access=EXECUTE, inode="hadoop":hadoop:supergroup:rwx------
+Exception in thread "main" org.apache.hadoop.security.AccessControlException: org.apache.hadoop.security.AccessControlException: Permission denied: user=guilin, access=EXECUTE, inode="hadoop":hadoop:supergroup:rwx------
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at org.apache.hadoop.ipc.RemoteException.instantiateException(RemoteException.java:95)
+	at org.apache.hadoop.ipc.RemoteException.unwrapRemoteException(RemoteException.java:57)
+	at org.apache.hadoop.hdfs.DFSClient.getFileInfo(DFSClient.java:1030)
+	at org.apache.hadoop.hdfs.DistributedFileSystem.getFileStatus(DistributedFileSystem.java:524)
+	at org.apache.hadoop.fs.FileSystem.exists(FileSystem.java:768)
+	at org.apache.hadoop.mapreduce.JobSubmissionFiles.getStagingDir(JobSubmissionFiles.java:103)
+	at org.apache.hadoop.mapred.JobClient$2.run(JobClient.java:918)
+	at org.apache.hadoop.mapred.JobClient$2.run(JobClient.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:415)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1149)
+	at org.apache.hadoop.mapred.JobClient.submitJobInternal(JobClient.java:912)
+	at org.apache.hadoop.mapreduce.Job.submit(Job.java:500)
+	at org.apache.hadoop.mapreduce.Job.waitForCompletion(Job.java:530)
+	at com.guilin.hadoop.mapreduce.WordCount.main(WordCount.java:75)
+Caused by: org.apache.hadoop.ipc.RemoteException: org.apache.hadoop.security.AccessControlException: Permission denied: user=guilin, access=EXECUTE, inode="hadoop":hadoop:supergroup:rwx------
+	at org.apache.hadoop.hdfs.server.namenode.FSPermissionChecker.check(FSPermissionChecker.java:199)
+	at org.apache.hadoop.hdfs.server.namenode.FSPermissionChecker.checkTraverse(FSPermissionChecker.java:155)
+	at org.apache.hadoop.hdfs.server.namenode.FSPermissionChecker.checkPermission(FSPermissionChecker.java:125)
+	at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.checkPermission(FSNamesystem.java:5468)
+	at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.checkTraverse(FSNamesystem.java:5447)
+	at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.getFileInfo(FSNamesystem.java:2168)
+	at org.apache.hadoop.hdfs.server.namenode.NameNode.getFileInfo(NameNode.java:888)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.hadoop.ipc.RPC$Server.call(RPC.java:578)
+	at org.apache.hadoop.ipc.Server$Handler$1.run(Server.java:1393)
+	at org.apache.hadoop.ipc.Server$Handler$1.run(Server.java:1389)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:396)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1149)
+	at org.apache.hadoop.ipc.Server$Handler.run(Server.java:1387)
+
+	at org.apache.hadoop.ipc.Client.call(Client.java:1107)
+	at org.apache.hadoop.ipc.RPC$Invoker.invoke(RPC.java:230)
+	at com.sun.proxy.$Proxy2.getFileInfo(Unknown Source)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.hadoop.io.retry.RetryInvocationHandler.invokeMethod(RetryInvocationHandler.java:85)
+	at org.apache.hadoop.io.retry.RetryInvocationHandler.invoke(RetryInvocationHandler.java:62)
+	at com.sun.proxy.$Proxy2.getFileInfo(Unknown Source)
+	at org.apache.hadoop.hdfs.DFSClient.getFileInfo(DFSClient.java:1028)
+	... 12 more
+14/10/18 08:51:04 ERROR security.UserGroupInformation: PriviledgedActionException as:guilin cause:org.apache.hadoop.security.AccessControlException: org.apache.hadoop.security.AccessControlException: Permission denied: user=guilin, access=EXECUTE, inode="hadoop":hadoop:supergroup:rwx------
+Exception in thread "main" org.apache.hadoop.security.AccessControlException: org.apache.hadoop.security.AccessControlException: Permission denied: user=guilin, access=EXECUTE, inode="hadoop":hadoop:supergroup:rwx------
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at org.apache.hadoop.ipc.RemoteException.instantiateException(RemoteException.java:95)
+	at org.apache.hadoop.ipc.RemoteException.unwrapRemoteException(RemoteException.java:57)
+	at org.apache.hadoop.hdfs.DFSClient.getFileInfo(DFSClient.java:1030)
+	at org.apache.hadoop.hdfs.DistributedFileSystem.getFileStatus(DistributedFileSystem.java:524)
+	at org.apache.hadoop.fs.FileSystem.exists(FileSystem.java:768)
+	at org.apache.hadoop.mapreduce.JobSubmissionFiles.getStagingDir(JobSubmissionFiles.java:103)
+	at org.apache.hadoop.mapred.JobClient$2.run(JobClient.java:918)
+	at org.apache.hadoop.mapred.JobClient$2.run(JobClient.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:415)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1149)
+	at org.apache.hadoop.mapred.JobClient.submitJobInternal(JobClient.java:912)
+	at org.apache.hadoop.mapreduce.Job.submit(Job.java:500)
+	at org.apache.hadoop.mapreduce.Job.waitForCompletion(Job.java:530)
+	at com.guilin.hadoop.mapreduce.WordCount.main(WordCount.java:75)
+Caused by: org.apache.hadoop.ipc.RemoteException: org.apache.hadoop.security.AccessControlException: Permission denied: user=guilin, access=EXECUTE, inode="hadoop":hadoop:supergroup:rwx------
+	at org.apache.hadoop.hdfs.server.namenode.FSPermissionChecker.check(FSPermissionChecker.java:199)
+	at org.apache.hadoop.hdfs.server.namenode.FSPermissionChecker.checkTraverse(FSPermissionChecker.java:155)
+	at org.apache.hadoop.hdfs.server.namenode.FSPermissionChecker.checkPermission(FSPermissionChecker.java:125)
+	at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.checkPermission(FSNamesystem.java:5468)
+	at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.checkTraverse(FSNamesystem.java:5447)
+	at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.getFileInfo(FSNamesystem.java:2168)
+	at org.apache.hadoop.hdfs.server.namenode.NameNode.getFileInfo(NameNode.java:888)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.hadoop.ipc.RPC$Server.call(RPC.java:578)
+	at org.apache.hadoop.ipc.Server$Handler$1.run(Server.java:1393)
+	at org.apache.hadoop.ipc.Server$Handler$1.run(Server.java:1389)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:396)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1149)
+	at org.apache.hadoop.ipc.Server$Handler.run(Server.java:1387)
+
+	at org.apache.hadoop.ipc.Client.call(Client.java:1107)
+	at org.apache.hadoop.ipc.RPC$Invoker.invoke(RPC.java:230)
+	at com.sun.proxy.$Proxy2.getFileInfo(Unknown Source)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.hadoop.io.retry.RetryInvocationHandler.invokeMethod(RetryInvocationHandler.java:85)
+	at org.apache.hadoop.io.retry.RetryInvocationHandler.invoke(RetryInvocationHandler.java:62)
+	at com.sun.proxy.$Proxy2.getFileInfo(Unknown Source)
+	at org.apache.hadoop.hdfs.DFSClient.getFileInfo(DFSClient.java:1028)
+	... 12 more
+14/10/18 08:51:47 ERROR security.UserGroupInformation: PriviledgedActionException as:guilin cause:org.apache.hadoop.security.AccessControlException: org.apache.hadoop.security.AccessControlException: Permission denied: user=guilin, access=EXECUTE, inode="hadoop":hadoop:supergroup:rwx------
+Exception in thread "main" org.apache.hadoop.security.AccessControlException: org.apache.hadoop.security.AccessControlException: Permission denied: user=guilin, access=EXECUTE, inode="hadoop":hadoop:supergroup:rwx------
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at org.apache.hadoop.ipc.RemoteException.instantiateException(RemoteException.java:95)
+	at org.apache.hadoop.ipc.RemoteException.unwrapRemoteException(RemoteException.java:57)
+	at org.apache.hadoop.hdfs.DFSClient.getFileInfo(DFSClient.java:1030)
+	at org.apache.hadoop.hdfs.DistributedFileSystem.getFileStatus(DistributedFileSystem.java:524)
+	at org.apache.hadoop.fs.FileSystem.exists(FileSystem.java:768)
+	at org.apache.hadoop.mapreduce.JobSubmissionFiles.getStagingDir(JobSubmissionFiles.java:103)
+	at org.apache.hadoop.mapred.JobClient$2.run(JobClient.java:918)
+	at org.apache.hadoop.mapred.JobClient$2.run(JobClient.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:415)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1149)
+	at org.apache.hadoop.mapred.JobClient.submitJobInternal(JobClient.java:912)
+	at org.apache.hadoop.mapreduce.Job.submit(Job.java:500)
+	at org.apache.hadoop.mapreduce.Job.waitForCompletion(Job.java:530)
+	at com.guilin.hadoop.mapreduce.WordCount.main(WordCount.java:75)
+Caused by: org.apache.hadoop.ipc.RemoteException: org.apache.hadoop.security.AccessControlException: Permission denied: user=guilin, access=EXECUTE, inode="hadoop":hadoop:supergroup:rwx------
+	at org.apache.hadoop.hdfs.server.namenode.FSPermissionChecker.check(FSPermissionChecker.java:199)
+	at org.apache.hadoop.hdfs.server.namenode.FSPermissionChecker.checkTraverse(FSPermissionChecker.java:155)
+	at org.apache.hadoop.hdfs.server.namenode.FSPermissionChecker.checkPermission(FSPermissionChecker.java:125)
+	at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.checkPermission(FSNamesystem.java:5468)
+	at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.checkTraverse(FSNamesystem.java:5447)
+	at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.getFileInfo(FSNamesystem.java:2168)
+	at org.apache.hadoop.hdfs.server.namenode.NameNode.getFileInfo(NameNode.java:888)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.hadoop.ipc.RPC$Server.call(RPC.java:578)
+	at org.apache.hadoop.ipc.Server$Handler$1.run(Server.java:1393)
+	at org.apache.hadoop.ipc.Server$Handler$1.run(Server.java:1389)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:396)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1149)
+	at org.apache.hadoop.ipc.Server$Handler.run(Server.java:1387)
+
+	at org.apache.hadoop.ipc.Client.call(Client.java:1107)
+	at org.apache.hadoop.ipc.RPC$Invoker.invoke(RPC.java:230)
+	at com.sun.proxy.$Proxy2.getFileInfo(Unknown Source)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.hadoop.io.retry.RetryInvocationHandler.invokeMethod(RetryInvocationHandler.java:85)
+	at org.apache.hadoop.io.retry.RetryInvocationHandler.invoke(RetryInvocationHandler.java:62)
+	at com.sun.proxy.$Proxy2.getFileInfo(Unknown Source)
+	at org.apache.hadoop.hdfs.DFSClient.getFileInfo(DFSClient.java:1028)
+	... 12 more
+14/10/18 08:52:20 ERROR security.UserGroupInformation: PriviledgedActionException as:guilin cause:org.apache.hadoop.security.AccessControlException: org.apache.hadoop.security.AccessControlException: Permission denied: user=guilin, access=EXECUTE, inode="hadoop":hadoop:supergroup:rwx------
+Exception in thread "main" org.apache.hadoop.security.AccessControlException: org.apache.hadoop.security.AccessControlException: Permission denied: user=guilin, access=EXECUTE, inode="hadoop":hadoop:supergroup:rwx------
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at org.apache.hadoop.ipc.RemoteException.instantiateException(RemoteException.java:95)
+	at org.apache.hadoop.ipc.RemoteException.unwrapRemoteException(RemoteException.java:57)
+	at org.apache.hadoop.hdfs.DFSClient.getFileInfo(DFSClient.java:1030)
+	at org.apache.hadoop.hdfs.DistributedFileSystem.getFileStatus(DistributedFileSystem.java:524)
+	at org.apache.hadoop.fs.FileSystem.exists(FileSystem.java:768)
+	at org.apache.hadoop.mapreduce.JobSubmissionFiles.getStagingDir(JobSubmissionFiles.java:103)
+	at org.apache.hadoop.mapred.JobClient$2.run(JobClient.java:918)
+	at org.apache.hadoop.mapred.JobClient$2.run(JobClient.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:415)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1149)
+	at org.apache.hadoop.mapred.JobClient.submitJobInternal(JobClient.java:912)
+	at org.apache.hadoop.mapreduce.Job.submit(Job.java:500)
+	at org.apache.hadoop.mapreduce.Job.waitForCompletion(Job.java:530)
+	at com.guilin.hadoop.mapreduce.WordCount.main(WordCount.java:75)
+Caused by: org.apache.hadoop.ipc.RemoteException: org.apache.hadoop.security.AccessControlException: Permission denied: user=guilin, access=EXECUTE, inode="hadoop":hadoop:supergroup:rwx------
+	at org.apache.hadoop.hdfs.server.namenode.FSPermissionChecker.check(FSPermissionChecker.java:199)
+	at org.apache.hadoop.hdfs.server.namenode.FSPermissionChecker.checkTraverse(FSPermissionChecker.java:155)
+	at org.apache.hadoop.hdfs.server.namenode.FSPermissionChecker.checkPermission(FSPermissionChecker.java:125)
+	at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.checkPermission(FSNamesystem.java:5468)
+	at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.checkTraverse(FSNamesystem.java:5447)
+	at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.getFileInfo(FSNamesystem.java:2168)
+	at org.apache.hadoop.hdfs.server.namenode.NameNode.getFileInfo(NameNode.java:888)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.hadoop.ipc.RPC$Server.call(RPC.java:578)
+	at org.apache.hadoop.ipc.Server$Handler$1.run(Server.java:1393)
+	at org.apache.hadoop.ipc.Server$Handler$1.run(Server.java:1389)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:396)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1149)
+	at org.apache.hadoop.ipc.Server$Handler.run(Server.java:1387)
+
+	at org.apache.hadoop.ipc.Client.call(Client.java:1107)
+	at org.apache.hadoop.ipc.RPC$Invoker.invoke(RPC.java:230)
+	at com.sun.proxy.$Proxy2.getFileInfo(Unknown Source)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.hadoop.io.retry.RetryInvocationHandler.invokeMethod(RetryInvocationHandler.java:85)
+	at org.apache.hadoop.io.retry.RetryInvocationHandler.invoke(RetryInvocationHandler.java:62)
+	at com.sun.proxy.$Proxy2.getFileInfo(Unknown Source)
+	at org.apache.hadoop.hdfs.DFSClient.getFileInfo(DFSClient.java:1028)
+	... 12 more
+14/10/18 08:52:34 ERROR security.UserGroupInformation: PriviledgedActionException as:guilin cause:org.apache.hadoop.security.AccessControlException: org.apache.hadoop.security.AccessControlException: Permission denied: user=guilin, access=EXECUTE, inode="hadoop":hadoop:supergroup:rwx------
+Exception in thread "main" org.apache.hadoop.security.AccessControlException: org.apache.hadoop.security.AccessControlException: Permission denied: user=guilin, access=EXECUTE, inode="hadoop":hadoop:supergroup:rwx------
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at org.apache.hadoop.ipc.RemoteException.instantiateException(RemoteException.java:95)
+	at org.apache.hadoop.ipc.RemoteException.unwrapRemoteException(RemoteException.java:57)
+	at org.apache.hadoop.hdfs.DFSClient.getFileInfo(DFSClient.java:1030)
+	at org.apache.hadoop.hdfs.DistributedFileSystem.getFileStatus(DistributedFileSystem.java:524)
+	at org.apache.hadoop.fs.FileSystem.exists(FileSystem.java:768)
+	at org.apache.hadoop.mapreduce.JobSubmissionFiles.getStagingDir(JobSubmissionFiles.java:103)
+	at org.apache.hadoop.mapred.JobClient$2.run(JobClient.java:918)
+	at org.apache.hadoop.mapred.JobClient$2.run(JobClient.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:415)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1149)
+	at org.apache.hadoop.mapred.JobClient.submitJobInternal(JobClient.java:912)
+	at org.apache.hadoop.mapreduce.Job.submit(Job.java:500)
+	at org.apache.hadoop.mapreduce.Job.waitForCompletion(Job.java:530)
+	at com.guilin.hadoop.mapreduce.WordCount.main(WordCount.java:75)
+Caused by: org.apache.hadoop.ipc.RemoteException: org.apache.hadoop.security.AccessControlException: Permission denied: user=guilin, access=EXECUTE, inode="hadoop":hadoop:supergroup:rwx------
+	at org.apache.hadoop.hdfs.server.namenode.FSPermissionChecker.check(FSPermissionChecker.java:199)
+	at org.apache.hadoop.hdfs.server.namenode.FSPermissionChecker.checkTraverse(FSPermissionChecker.java:155)
+	at org.apache.hadoop.hdfs.server.namenode.FSPermissionChecker.checkPermission(FSPermissionChecker.java:125)
+	at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.checkPermission(FSNamesystem.java:5468)
+	at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.checkTraverse(FSNamesystem.java:5447)
+	at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.getFileInfo(FSNamesystem.java:2168)
+	at org.apache.hadoop.hdfs.server.namenode.NameNode.getFileInfo(NameNode.java:888)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.hadoop.ipc.RPC$Server.call(RPC.java:578)
+	at org.apache.hadoop.ipc.Server$Handler$1.run(Server.java:1393)
+	at org.apache.hadoop.ipc.Server$Handler$1.run(Server.java:1389)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:396)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1149)
+	at org.apache.hadoop.ipc.Server$Handler.run(Server.java:1387)
+
+	at org.apache.hadoop.ipc.Client.call(Client.java:1107)
+	at org.apache.hadoop.ipc.RPC$Invoker.invoke(RPC.java:230)
+	at com.sun.proxy.$Proxy2.getFileInfo(Unknown Source)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.hadoop.io.retry.RetryInvocationHandler.invokeMethod(RetryInvocationHandler.java:85)
+	at org.apache.hadoop.io.retry.RetryInvocationHandler.invoke(RetryInvocationHandler.java:62)
+	at com.sun.proxy.$Proxy2.getFileInfo(Unknown Source)
+	at org.apache.hadoop.hdfs.DFSClient.getFileInfo(DFSClient.java:1028)
+	... 12 more
+14/10/18 08:52:43 ERROR security.UserGroupInformation: PriviledgedActionException as:guilin cause:org.apache.hadoop.security.AccessControlException: org.apache.hadoop.security.AccessControlException: Permission denied: user=guilin, access=EXECUTE, inode="hadoop":hadoop:supergroup:rwx------
+Exception in thread "main" org.apache.hadoop.security.AccessControlException: org.apache.hadoop.security.AccessControlException: Permission denied: user=guilin, access=EXECUTE, inode="hadoop":hadoop:supergroup:rwx------
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at org.apache.hadoop.ipc.RemoteException.instantiateException(RemoteException.java:95)
+	at org.apache.hadoop.ipc.RemoteException.unwrapRemoteException(RemoteException.java:57)
+	at org.apache.hadoop.hdfs.DFSClient.getFileInfo(DFSClient.java:1030)
+	at org.apache.hadoop.hdfs.DistributedFileSystem.getFileStatus(DistributedFileSystem.java:524)
+	at org.apache.hadoop.fs.FileSystem.exists(FileSystem.java:768)
+	at org.apache.hadoop.mapreduce.JobSubmissionFiles.getStagingDir(JobSubmissionFiles.java:103)
+	at org.apache.hadoop.mapred.JobClient$2.run(JobClient.java:918)
+	at org.apache.hadoop.mapred.JobClient$2.run(JobClient.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:415)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1149)
+	at org.apache.hadoop.mapred.JobClient.submitJobInternal(JobClient.java:912)
+	at org.apache.hadoop.mapreduce.Job.submit(Job.java:500)
+	at org.apache.hadoop.mapreduce.Job.waitForCompletion(Job.java:530)
+	at com.guilin.hadoop.mapreduce.WordCount.main(WordCount.java:75)
+Caused by: org.apache.hadoop.ipc.RemoteException: org.apache.hadoop.security.AccessControlException: Permission denied: user=guilin, access=EXECUTE, inode="hadoop":hadoop:supergroup:rwx------
+	at org.apache.hadoop.hdfs.server.namenode.FSPermissionChecker.check(FSPermissionChecker.java:199)
+	at org.apache.hadoop.hdfs.server.namenode.FSPermissionChecker.checkTraverse(FSPermissionChecker.java:155)
+	at org.apache.hadoop.hdfs.server.namenode.FSPermissionChecker.checkPermission(FSPermissionChecker.java:125)
+	at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.checkPermission(FSNamesystem.java:5468)
+	at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.checkTraverse(FSNamesystem.java:5447)
+	at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.getFileInfo(FSNamesystem.java:2168)
+	at org.apache.hadoop.hdfs.server.namenode.NameNode.getFileInfo(NameNode.java:888)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.hadoop.ipc.RPC$Server.call(RPC.java:578)
+	at org.apache.hadoop.ipc.Server$Handler$1.run(Server.java:1393)
+	at org.apache.hadoop.ipc.Server$Handler$1.run(Server.java:1389)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:396)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1149)
+	at org.apache.hadoop.ipc.Server$Handler.run(Server.java:1387)
+
+	at org.apache.hadoop.ipc.Client.call(Client.java:1107)
+	at org.apache.hadoop.ipc.RPC$Invoker.invoke(RPC.java:230)
+	at com.sun.proxy.$Proxy2.getFileInfo(Unknown Source)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.hadoop.io.retry.RetryInvocationHandler.invokeMethod(RetryInvocationHandler.java:85)
+	at org.apache.hadoop.io.retry.RetryInvocationHandler.invoke(RetryInvocationHandler.java:62)
+	at com.sun.proxy.$Proxy2.getFileInfo(Unknown Source)
+	at org.apache.hadoop.hdfs.DFSClient.getFileInfo(DFSClient.java:1028)
+	... 12 more
+14/10/18 08:53:41 ERROR security.UserGroupInformation: PriviledgedActionException as:guilin cause:org.apache.hadoop.security.AccessControlException: org.apache.hadoop.security.AccessControlException: Permission denied: user=guilin, access=EXECUTE, inode="hadoop":hadoop:supergroup:rwx------
+Exception in thread "main" org.apache.hadoop.security.AccessControlException: org.apache.hadoop.security.AccessControlException: Permission denied: user=guilin, access=EXECUTE, inode="hadoop":hadoop:supergroup:rwx------
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at org.apache.hadoop.ipc.RemoteException.instantiateException(RemoteException.java:95)
+	at org.apache.hadoop.ipc.RemoteException.unwrapRemoteException(RemoteException.java:57)
+	at org.apache.hadoop.hdfs.DFSClient.getFileInfo(DFSClient.java:1030)
+	at org.apache.hadoop.hdfs.DistributedFileSystem.getFileStatus(DistributedFileSystem.java:524)
+	at org.apache.hadoop.fs.FileSystem.exists(FileSystem.java:768)
+	at org.apache.hadoop.mapreduce.JobSubmissionFiles.getStagingDir(JobSubmissionFiles.java:103)
+	at org.apache.hadoop.mapred.JobClient$2.run(JobClient.java:918)
+	at org.apache.hadoop.mapred.JobClient$2.run(JobClient.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:415)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1149)
+	at org.apache.hadoop.mapred.JobClient.submitJobInternal(JobClient.java:912)
+	at org.apache.hadoop.mapreduce.Job.submit(Job.java:500)
+	at org.apache.hadoop.mapreduce.Job.waitForCompletion(Job.java:530)
+	at com.guilin.hadoop.mapreduce.WordCount.main(WordCount.java:75)
+Caused by: org.apache.hadoop.ipc.RemoteException: org.apache.hadoop.security.AccessControlException: Permission denied: user=guilin, access=EXECUTE, inode="hadoop":hadoop:supergroup:rwx------
+	at org.apache.hadoop.hdfs.server.namenode.FSPermissionChecker.check(FSPermissionChecker.java:199)
+	at org.apache.hadoop.hdfs.server.namenode.FSPermissionChecker.checkTraverse(FSPermissionChecker.java:155)
+	at org.apache.hadoop.hdfs.server.namenode.FSPermissionChecker.checkPermission(FSPermissionChecker.java:125)
+	at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.checkPermission(FSNamesystem.java:5468)
+	at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.checkTraverse(FSNamesystem.java:5447)
+	at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.getFileInfo(FSNamesystem.java:2168)
+	at org.apache.hadoop.hdfs.server.namenode.NameNode.getFileInfo(NameNode.java:888)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.hadoop.ipc.RPC$Server.call(RPC.java:578)
+	at org.apache.hadoop.ipc.Server$Handler$1.run(Server.java:1393)
+	at org.apache.hadoop.ipc.Server$Handler$1.run(Server.java:1389)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:396)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1149)
+	at org.apache.hadoop.ipc.Server$Handler.run(Server.java:1387)
+
+	at org.apache.hadoop.ipc.Client.call(Client.java:1107)
+	at org.apache.hadoop.ipc.RPC$Invoker.invoke(RPC.java:230)
+	at com.sun.proxy.$Proxy1.getFileInfo(Unknown Source)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.hadoop.io.retry.RetryInvocationHandler.invokeMethod(RetryInvocationHandler.java:85)
+	at org.apache.hadoop.io.retry.RetryInvocationHandler.invoke(RetryInvocationHandler.java:62)
+	at com.sun.proxy.$Proxy1.getFileInfo(Unknown Source)
+	at org.apache.hadoop.hdfs.DFSClient.getFileInfo(DFSClient.java:1028)
+	... 12 more
+14/10/18 08:53:53 ERROR security.UserGroupInformation: PriviledgedActionException as:guilin cause:org.apache.hadoop.security.AccessControlException: org.apache.hadoop.security.AccessControlException: Permission denied: user=guilin, access=EXECUTE, inode="hadoop":hadoop:supergroup:rwx------
+Exception in thread "main" org.apache.hadoop.security.AccessControlException: org.apache.hadoop.security.AccessControlException: Permission denied: user=guilin, access=EXECUTE, inode="hadoop":hadoop:supergroup:rwx------
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at org.apache.hadoop.ipc.RemoteException.instantiateException(RemoteException.java:95)
+	at org.apache.hadoop.ipc.RemoteException.unwrapRemoteException(RemoteException.java:57)
+	at org.apache.hadoop.hdfs.DFSClient.getFileInfo(DFSClient.java:1030)
+	at org.apache.hadoop.hdfs.DistributedFileSystem.getFileStatus(DistributedFileSystem.java:524)
+	at org.apache.hadoop.fs.FileSystem.exists(FileSystem.java:768)
+	at org.apache.hadoop.mapreduce.JobSubmissionFiles.getStagingDir(JobSubmissionFiles.java:103)
+	at org.apache.hadoop.mapred.JobClient$2.run(JobClient.java:918)
+	at org.apache.hadoop.mapred.JobClient$2.run(JobClient.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:415)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1149)
+	at org.apache.hadoop.mapred.JobClient.submitJobInternal(JobClient.java:912)
+	at org.apache.hadoop.mapreduce.Job.submit(Job.java:500)
+	at org.apache.hadoop.mapreduce.Job.waitForCompletion(Job.java:530)
+	at com.guilin.hadoop.mapreduce.WordCount.main(WordCount.java:75)
+Caused by: org.apache.hadoop.ipc.RemoteException: org.apache.hadoop.security.AccessControlException: Permission denied: user=guilin, access=EXECUTE, inode="hadoop":hadoop:supergroup:rwx------
+	at org.apache.hadoop.hdfs.server.namenode.FSPermissionChecker.check(FSPermissionChecker.java:199)
+	at org.apache.hadoop.hdfs.server.namenode.FSPermissionChecker.checkTraverse(FSPermissionChecker.java:155)
+	at org.apache.hadoop.hdfs.server.namenode.FSPermissionChecker.checkPermission(FSPermissionChecker.java:125)
+	at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.checkPermission(FSNamesystem.java:5468)
+	at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.checkTraverse(FSNamesystem.java:5447)
+	at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.getFileInfo(FSNamesystem.java:2168)
+	at org.apache.hadoop.hdfs.server.namenode.NameNode.getFileInfo(NameNode.java:888)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.hadoop.ipc.RPC$Server.call(RPC.java:578)
+	at org.apache.hadoop.ipc.Server$Handler$1.run(Server.java:1393)
+	at org.apache.hadoop.ipc.Server$Handler$1.run(Server.java:1389)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:396)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1149)
+	at org.apache.hadoop.ipc.Server$Handler.run(Server.java:1387)
+
+	at org.apache.hadoop.ipc.Client.call(Client.java:1107)
+	at org.apache.hadoop.ipc.RPC$Invoker.invoke(RPC.java:230)
+	at com.sun.proxy.$Proxy1.getFileInfo(Unknown Source)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.hadoop.io.retry.RetryInvocationHandler.invokeMethod(RetryInvocationHandler.java:85)
+	at org.apache.hadoop.io.retry.RetryInvocationHandler.invoke(RetryInvocationHandler.java:62)
+	at com.sun.proxy.$Proxy1.getFileInfo(Unknown Source)
+	at org.apache.hadoop.hdfs.DFSClient.getFileInfo(DFSClient.java:1028)
+	... 12 more
+14/10/18 09:03:39 ERROR security.UserGroupInformation: PriviledgedActionException as:guilin cause:org.apache.hadoop.security.AccessControlException: org.apache.hadoop.security.AccessControlException: Permission denied: user=guilin, access=EXECUTE, inode="hadoop":hadoop:supergroup:rwx------
+Exception in thread "main" org.apache.hadoop.security.AccessControlException: org.apache.hadoop.security.AccessControlException: Permission denied: user=guilin, access=EXECUTE, inode="hadoop":hadoop:supergroup:rwx------
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at org.apache.hadoop.ipc.RemoteException.instantiateException(RemoteException.java:95)
+	at org.apache.hadoop.ipc.RemoteException.unwrapRemoteException(RemoteException.java:57)
+	at org.apache.hadoop.hdfs.DFSClient.getFileInfo(DFSClient.java:1030)
+	at org.apache.hadoop.hdfs.DistributedFileSystem.getFileStatus(DistributedFileSystem.java:524)
+	at org.apache.hadoop.fs.FileSystem.exists(FileSystem.java:768)
+	at org.apache.hadoop.mapreduce.JobSubmissionFiles.getStagingDir(JobSubmissionFiles.java:103)
+	at org.apache.hadoop.mapred.JobClient$2.run(JobClient.java:918)
+	at org.apache.hadoop.mapred.JobClient$2.run(JobClient.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:415)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1149)
+	at org.apache.hadoop.mapred.JobClient.submitJobInternal(JobClient.java:912)
+	at org.apache.hadoop.mapreduce.Job.submit(Job.java:500)
+	at org.apache.hadoop.mapreduce.Job.waitForCompletion(Job.java:530)
+	at com.guilin.hadoop.mapreduce.WordCount.main(WordCount.java:75)
+Caused by: org.apache.hadoop.ipc.RemoteException: org.apache.hadoop.security.AccessControlException: Permission denied: user=guilin, access=EXECUTE, inode="hadoop":hadoop:supergroup:rwx------
+	at org.apache.hadoop.hdfs.server.namenode.FSPermissionChecker.check(FSPermissionChecker.java:199)
+	at org.apache.hadoop.hdfs.server.namenode.FSPermissionChecker.checkTraverse(FSPermissionChecker.java:155)
+	at org.apache.hadoop.hdfs.server.namenode.FSPermissionChecker.checkPermission(FSPermissionChecker.java:125)
+	at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.checkPermission(FSNamesystem.java:5468)
+	at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.checkTraverse(FSNamesystem.java:5447)
+	at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.getFileInfo(FSNamesystem.java:2168)
+	at org.apache.hadoop.hdfs.server.namenode.NameNode.getFileInfo(NameNode.java:888)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.hadoop.ipc.RPC$Server.call(RPC.java:578)
+	at org.apache.hadoop.ipc.Server$Handler$1.run(Server.java:1393)
+	at org.apache.hadoop.ipc.Server$Handler$1.run(Server.java:1389)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:396)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1149)
+	at org.apache.hadoop.ipc.Server$Handler.run(Server.java:1387)
+
+	at org.apache.hadoop.ipc.Client.call(Client.java:1107)
+	at org.apache.hadoop.ipc.RPC$Invoker.invoke(RPC.java:230)
+	at com.sun.proxy.$Proxy1.getFileInfo(Unknown Source)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.hadoop.io.retry.RetryInvocationHandler.invokeMethod(RetryInvocationHandler.java:85)
+	at org.apache.hadoop.io.retry.RetryInvocationHandler.invoke(RetryInvocationHandler.java:62)
+	at com.sun.proxy.$Proxy1.getFileInfo(Unknown Source)
+	at org.apache.hadoop.hdfs.DFSClient.getFileInfo(DFSClient.java:1028)
+	... 12 more
+14/10/18 09:57:19 WARN mapred.JobClient: No job jar file set.  User classes may not be found. See JobConf(Class) or JobConf#setJar(String).
+14/10/18 09:57:19 INFO input.FileInputFormat: Total input paths to process : 5
+14/10/18 09:57:19 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+14/10/18 09:57:19 WARN snappy.LoadSnappy: Snappy native library not loaded
+14/10/18 09:57:20 INFO mapred.JobClient: Running job: job_201410181754_0001
+14/10/18 09:57:21 INFO mapred.JobClient:  map 0% reduce 0%
+14/10/18 09:57:29 INFO mapred.JobClient: Task Id : attempt_201410181754_0001_m_000004_0, Status : FAILED
+java.lang.RuntimeException: java.lang.ClassNotFoundException: com.guilin.hadoop.mapreduce.WordCount$TokenizerMapper
+	at org.apache.hadoop.conf.Configuration.getClass(Configuration.java:849)
+	at org.apache.hadoop.mapreduce.JobContext.getMapperClass(JobContext.java:199)
+	at org.apache.hadoop.mapred.MapTask.runNewMapper(MapTask.java:719)
+	at org.apache.hadoop.mapred.MapTask.run(MapTask.java:370)
+	at org.apache.hadoop.mapred.Child$4.run(Child.java:255)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:396)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1149)
+	at org.apache.hadoop.mapred.Child.main(Child.java:249)
+Caused by: java.lang.ClassNotFoundException: com.guilin.hadoop.mapreduce.WordCount$TokenizerMapper
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:202)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:190)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:307)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:301)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:248)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:247)
+	at org.apache.hadoop.conf.Configuration.getClassByName(Configuration.java:802)
+	at org.apache.hadoop.conf.Configuration.getClass(Configuration.java:847)
+	... 8 more
+
+14/10/18 09:57:29 INFO mapred.JobClient: Task Id : attempt_201410181754_0001_m_000000_0, Status : FAILED
+java.lang.RuntimeException: java.lang.ClassNotFoundException: com.guilin.hadoop.mapreduce.WordCount$TokenizerMapper
+	at org.apache.hadoop.conf.Configuration.getClass(Configuration.java:849)
+	at org.apache.hadoop.mapreduce.JobContext.getMapperClass(JobContext.java:199)
+	at org.apache.hadoop.mapred.MapTask.runNewMapper(MapTask.java:719)
+	at org.apache.hadoop.mapred.MapTask.run(MapTask.java:370)
+	at org.apache.hadoop.mapred.Child$4.run(Child.java:255)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:396)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1149)
+	at org.apache.hadoop.mapred.Child.main(Child.java:249)
+Caused by: java.lang.ClassNotFoundException: com.guilin.hadoop.mapreduce.WordCount$TokenizerMapper
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:202)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:190)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:307)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:301)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:248)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:247)
+	at org.apache.hadoop.conf.Configuration.getClassByName(Configuration.java:802)
+	at org.apache.hadoop.conf.Configuration.getClass(Configuration.java:847)
+	... 8 more
+
+14/10/18 09:57:30 INFO mapred.JobClient: Task Id : attempt_201410181754_0001_m_000001_0, Status : FAILED
+java.lang.RuntimeException: java.lang.ClassNotFoundException: com.guilin.hadoop.mapreduce.WordCount$TokenizerMapper
+	at org.apache.hadoop.conf.Configuration.getClass(Configuration.java:849)
+	at org.apache.hadoop.mapreduce.JobContext.getMapperClass(JobContext.java:199)
+	at org.apache.hadoop.mapred.MapTask.runNewMapper(MapTask.java:719)
+	at org.apache.hadoop.mapred.MapTask.run(MapTask.java:370)
+	at org.apache.hadoop.mapred.Child$4.run(Child.java:255)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:396)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1149)
+	at org.apache.hadoop.mapred.Child.main(Child.java:249)
+Caused by: java.lang.ClassNotFoundException: com.guilin.hadoop.mapreduce.WordCount$TokenizerMapper
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:202)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:190)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:307)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:301)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:248)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:247)
+	at org.apache.hadoop.conf.Configuration.getClassByName(Configuration.java:802)
+	at org.apache.hadoop.conf.Configuration.getClass(Configuration.java:847)
+	... 8 more
+
+14/10/18 09:57:30 INFO mapred.JobClient: Task Id : attempt_201410181754_0001_m_000003_0, Status : FAILED
+java.lang.RuntimeException: java.lang.ClassNotFoundException: com.guilin.hadoop.mapreduce.WordCount$TokenizerMapper
+	at org.apache.hadoop.conf.Configuration.getClass(Configuration.java:849)
+	at org.apache.hadoop.mapreduce.JobContext.getMapperClass(JobContext.java:199)
+	at org.apache.hadoop.mapred.MapTask.runNewMapper(MapTask.java:719)
+	at org.apache.hadoop.mapred.MapTask.run(MapTask.java:370)
+	at org.apache.hadoop.mapred.Child$4.run(Child.java:255)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:396)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1149)
+	at org.apache.hadoop.mapred.Child.main(Child.java:249)
+Caused by: java.lang.ClassNotFoundException: com.guilin.hadoop.mapreduce.WordCount$TokenizerMapper
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:202)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:190)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:307)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:301)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:248)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:247)
+	at org.apache.hadoop.conf.Configuration.getClassByName(Configuration.java:802)
+	at org.apache.hadoop.conf.Configuration.getClass(Configuration.java:847)
+	... 8 more
+
+14/10/18 09:57:31 INFO mapred.JobClient: Task Id : attempt_201410181754_0001_m_000002_0, Status : FAILED
+java.lang.RuntimeException: java.lang.ClassNotFoundException: com.guilin.hadoop.mapreduce.WordCount$TokenizerMapper
+	at org.apache.hadoop.conf.Configuration.getClass(Configuration.java:849)
+	at org.apache.hadoop.mapreduce.JobContext.getMapperClass(JobContext.java:199)
+	at org.apache.hadoop.mapred.MapTask.runNewMapper(MapTask.java:719)
+	at org.apache.hadoop.mapred.MapTask.run(MapTask.java:370)
+	at org.apache.hadoop.mapred.Child$4.run(Child.java:255)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:396)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1149)
+	at org.apache.hadoop.mapred.Child.main(Child.java:249)
+Caused by: java.lang.ClassNotFoundException: com.guilin.hadoop.mapreduce.WordCount$TokenizerMapper
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:202)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:190)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:307)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:301)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:248)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:247)
+	at org.apache.hadoop.conf.Configuration.getClassByName(Configuration.java:802)
+	at org.apache.hadoop.conf.Configuration.getClass(Configuration.java:847)
+	... 8 more
+
+14/10/18 10:07:54 INFO input.FileInputFormat: Total input paths to process : 5
+14/10/18 10:07:54 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+14/10/18 10:07:54 WARN snappy.LoadSnappy: Snappy native library not loaded
+14/10/18 10:07:54 INFO mapred.JobClient: Running job: job_201410181754_0002
+14/10/18 10:07:55 INFO mapred.JobClient:  map 0% reduce 0%
+14/10/18 10:08:01 INFO mapred.JobClient: Task Id : attempt_201410181754_0002_m_000004_0, Status : FAILED
+java.lang.RuntimeException: java.lang.ClassNotFoundException: com.guilin.hadoop.mapreduce.WordCount$TokenizerMapper
+	at org.apache.hadoop.conf.Configuration.getClass(Configuration.java:849)
+	at org.apache.hadoop.mapreduce.JobContext.getMapperClass(JobContext.java:199)
+	at org.apache.hadoop.mapred.MapTask.runNewMapper(MapTask.java:719)
+	at org.apache.hadoop.mapred.MapTask.run(MapTask.java:370)
+	at org.apache.hadoop.mapred.Child$4.run(Child.java:255)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:396)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1149)
+	at org.apache.hadoop.mapred.Child.main(Child.java:249)
+Caused by: java.lang.ClassNotFoundException: com.guilin.hadoop.mapreduce.WordCount$TokenizerMapper
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:202)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:190)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:307)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:301)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:248)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:247)
+	at org.apache.hadoop.conf.Configuration.getClassByName(Configuration.java:802)
+	at org.apache.hadoop.conf.Configuration.getClass(Configuration.java:847)
+	... 8 more
+
+14/10/18 10:08:02 INFO mapred.JobClient: Task Id : attempt_201410181754_0002_m_000000_0, Status : FAILED
+java.lang.RuntimeException: java.lang.ClassNotFoundException: com.guilin.hadoop.mapreduce.WordCount$TokenizerMapper
+	at org.apache.hadoop.conf.Configuration.getClass(Configuration.java:849)
+	at org.apache.hadoop.mapreduce.JobContext.getMapperClass(JobContext.java:199)
+	at org.apache.hadoop.mapred.MapTask.runNewMapper(MapTask.java:719)
+	at org.apache.hadoop.mapred.MapTask.run(MapTask.java:370)
+	at org.apache.hadoop.mapred.Child$4.run(Child.java:255)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:396)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1149)
+	at org.apache.hadoop.mapred.Child.main(Child.java:249)
+Caused by: java.lang.ClassNotFoundException: com.guilin.hadoop.mapreduce.WordCount$TokenizerMapper
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:202)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:190)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:307)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:301)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:248)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:247)
+	at org.apache.hadoop.conf.Configuration.getClassByName(Configuration.java:802)
+	at org.apache.hadoop.conf.Configuration.getClass(Configuration.java:847)
+	... 8 more
+
+14/10/18 10:08:02 INFO mapred.JobClient: Task Id : attempt_201410181754_0002_m_000001_0, Status : FAILED
+java.lang.RuntimeException: java.lang.ClassNotFoundException: com.guilin.hadoop.mapreduce.WordCount$TokenizerMapper
+	at org.apache.hadoop.conf.Configuration.getClass(Configuration.java:849)
+	at org.apache.hadoop.mapreduce.JobContext.getMapperClass(JobContext.java:199)
+	at org.apache.hadoop.mapred.MapTask.runNewMapper(MapTask.java:719)
+	at org.apache.hadoop.mapred.MapTask.run(MapTask.java:370)
+	at org.apache.hadoop.mapred.Child$4.run(Child.java:255)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:396)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1149)
+	at org.apache.hadoop.mapred.Child.main(Child.java:249)
+Caused by: java.lang.ClassNotFoundException: com.guilin.hadoop.mapreduce.WordCount$TokenizerMapper
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:202)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:190)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:307)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:301)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:248)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:247)
+	at org.apache.hadoop.conf.Configuration.getClassByName(Configuration.java:802)
+	at org.apache.hadoop.conf.Configuration.getClass(Configuration.java:847)
+	... 8 more
+
+14/10/18 10:08:02 INFO mapred.JobClient: Task Id : attempt_201410181754_0002_m_000002_0, Status : FAILED
+java.lang.RuntimeException: java.lang.ClassNotFoundException: com.guilin.hadoop.mapreduce.WordCount$TokenizerMapper
+	at org.apache.hadoop.conf.Configuration.getClass(Configuration.java:849)
+	at org.apache.hadoop.mapreduce.JobContext.getMapperClass(JobContext.java:199)
+	at org.apache.hadoop.mapred.MapTask.runNewMapper(MapTask.java:719)
+	at org.apache.hadoop.mapred.MapTask.run(MapTask.java:370)
+	at org.apache.hadoop.mapred.Child$4.run(Child.java:255)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:396)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1149)
+	at org.apache.hadoop.mapred.Child.main(Child.java:249)
+Caused by: java.lang.ClassNotFoundException: com.guilin.hadoop.mapreduce.WordCount$TokenizerMapper
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:202)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:190)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:307)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:301)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:248)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:247)
+	at org.apache.hadoop.conf.Configuration.getClassByName(Configuration.java:802)
+	at org.apache.hadoop.conf.Configuration.getClass(Configuration.java:847)
+	... 8 more
+
+14/10/18 10:08:03 INFO mapred.JobClient: Task Id : attempt_201410181754_0002_m_000003_0, Status : FAILED
+java.lang.RuntimeException: java.lang.ClassNotFoundException: com.guilin.hadoop.mapreduce.WordCount$TokenizerMapper
+	at org.apache.hadoop.conf.Configuration.getClass(Configuration.java:849)
+	at org.apache.hadoop.mapreduce.JobContext.getMapperClass(JobContext.java:199)
+	at org.apache.hadoop.mapred.MapTask.runNewMapper(MapTask.java:719)
+	at org.apache.hadoop.mapred.MapTask.run(MapTask.java:370)
+	at org.apache.hadoop.mapred.Child$4.run(Child.java:255)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:396)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1149)
+	at org.apache.hadoop.mapred.Child.main(Child.java:249)
+Caused by: java.lang.ClassNotFoundException: com.guilin.hadoop.mapreduce.WordCount$TokenizerMapper
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:202)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:190)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:307)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:301)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:248)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:247)
+	at org.apache.hadoop.conf.Configuration.getClassByName(Configuration.java:802)
+	at org.apache.hadoop.conf.Configuration.getClass(Configuration.java:847)
+	... 8 more
+
+14/10/18 10:08:07 INFO mapred.JobClient: Task Id : attempt_201410181754_0002_m_000004_1, Status : FAILED
+java.lang.RuntimeException: java.lang.ClassNotFoundException: com.guilin.hadoop.mapreduce.WordCount$TokenizerMapper
+	at org.apache.hadoop.conf.Configuration.getClass(Configuration.java:849)
+	at org.apache.hadoop.mapreduce.JobContext.getMapperClass(JobContext.java:199)
+	at org.apache.hadoop.mapred.MapTask.runNewMapper(MapTask.java:719)
+	at org.apache.hadoop.mapred.MapTask.run(MapTask.java:370)
+	at org.apache.hadoop.mapred.Child$4.run(Child.java:255)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:396)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1149)
+	at org.apache.hadoop.mapred.Child.main(Child.java:249)
+Caused by: java.lang.ClassNotFoundException: com.guilin.hadoop.mapreduce.WordCount$TokenizerMapper
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:202)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:190)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:307)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:301)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:248)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:247)
+	at org.apache.hadoop.conf.Configuration.getClassByName(Configuration.java:802)
+	at org.apache.hadoop.conf.Configuration.getClass(Configuration.java:847)
+	... 8 more
+
+14/10/18 10:09:05 INFO input.FileInputFormat: Total input paths to process : 5
+14/10/18 10:09:05 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+14/10/18 10:09:05 WARN snappy.LoadSnappy: Snappy native library not loaded
+14/10/18 10:09:05 INFO mapred.JobClient: Running job: job_201410181754_0003
+14/10/18 10:09:06 INFO mapred.JobClient:  map 0% reduce 0%
+14/10/18 10:09:13 INFO mapred.JobClient: Task Id : attempt_201410181754_0003_m_000004_0, Status : FAILED
+java.io.FileNotFoundException: File file:/D:/WorkSpace/MyEclipseProjects/Hadoop/input/user.txt does not exist.
+	at org.apache.hadoop.fs.RawLocalFileSystem.getFileStatus(RawLocalFileSystem.java:397)
+	at org.apache.hadoop.fs.FilterFileSystem.getFileStatus(FilterFileSystem.java:251)
+	at org.apache.hadoop.fs.ChecksumFileSystem$ChecksumFSInputChecker.<init>(ChecksumFileSystem.java:125)
+	at org.apache.hadoop.fs.ChecksumFileSystem.open(ChecksumFileSystem.java:283)
+	at org.apache.hadoop.fs.FileSystem.open(FileSystem.java:427)
+	at org.apache.hadoop.mapreduce.lib.input.LineRecordReader.initialize(LineRecordReader.java:75)
+	at org.apache.hadoop.mapred.MapTask$NewTrackingRecordReader.initialize(MapTask.java:522)
+	at org.apache.hadoop.mapred.MapTask.runNewMapper(MapTask.java:763)
+	at org.apache.hadoop.mapred.MapTask.run(MapTask.java:370)
+	at org.apache.hadoop.mapred.Child$4.run(Child.java:255)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:396)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1149)
+	at org.apache.hadoop.mapred.Child.main(Child.java:249)
+
+14/10/18 10:09:15 INFO mapred.JobClient: Task Id : attempt_201410181754_0003_m_000000_0, Status : FAILED
+java.io.FileNotFoundException: File file:/D:/WorkSpace/MyEclipseProjects/Hadoop/input/f1000 does not exist.
+	at org.apache.hadoop.fs.RawLocalFileSystem.getFileStatus(RawLocalFileSystem.java:397)
+	at org.apache.hadoop.fs.FilterFileSystem.getFileStatus(FilterFileSystem.java:251)
+	at org.apache.hadoop.fs.ChecksumFileSystem$ChecksumFSInputChecker.<init>(ChecksumFileSystem.java:125)
+	at org.apache.hadoop.fs.ChecksumFileSystem.open(ChecksumFileSystem.java:283)
+	at org.apache.hadoop.fs.FileSystem.open(FileSystem.java:427)
+	at org.apache.hadoop.mapreduce.lib.input.LineRecordReader.initialize(LineRecordReader.java:75)
+	at org.apache.hadoop.mapred.MapTask$NewTrackingRecordReader.initialize(MapTask.java:522)
+	at org.apache.hadoop.mapred.MapTask.runNewMapper(MapTask.java:763)
+	at org.apache.hadoop.mapred.MapTask.run(MapTask.java:370)
+	at org.apache.hadoop.mapred.Child$4.run(Child.java:255)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:396)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1149)
+	at org.apache.hadoop.mapred.Child.main(Child.java:249)
+
+14/10/18 10:09:15 INFO mapred.JobClient: Task Id : attempt_201410181754_0003_m_000001_0, Status : FAILED
+java.io.FileNotFoundException: File file:/D:/WorkSpace/MyEclipseProjects/Hadoop/input/hrs.sql does not exist.
+	at org.apache.hadoop.fs.RawLocalFileSystem.getFileStatus(RawLocalFileSystem.java:397)
+	at org.apache.hadoop.fs.FilterFileSystem.getFileStatus(FilterFileSystem.java:251)
+	at org.apache.hadoop.fs.ChecksumFileSystem$ChecksumFSInputChecker.<init>(ChecksumFileSystem.java:125)
+	at org.apache.hadoop.fs.ChecksumFileSystem.open(ChecksumFileSystem.java:283)
+	at org.apache.hadoop.fs.FileSystem.open(FileSystem.java:427)
+	at org.apache.hadoop.mapreduce.lib.input.LineRecordReader.initialize(LineRecordReader.java:75)
+	at org.apache.hadoop.mapred.MapTask$NewTrackingRecordReader.initialize(MapTask.java:522)
+	at org.apache.hadoop.mapred.MapTask.runNewMapper(MapTask.java:763)
+	at org.apache.hadoop.mapred.MapTask.run(MapTask.java:370)
+	at org.apache.hadoop.mapred.Child$4.run(Child.java:255)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:396)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1149)
+	at org.apache.hadoop.mapred.Child.main(Child.java:249)
+
+14/10/18 10:09:15 INFO mapred.JobClient: Task Id : attempt_201410181754_0003_m_000002_0, Status : FAILED
+java.io.FileNotFoundException: File file:/D:/WorkSpace/MyEclipseProjects/Hadoop/input/hello.txt does not exist.
+	at org.apache.hadoop.fs.RawLocalFileSystem.getFileStatus(RawLocalFileSystem.java:397)
+	at org.apache.hadoop.fs.FilterFileSystem.getFileStatus(FilterFileSystem.java:251)
+	at org.apache.hadoop.fs.ChecksumFileSystem$ChecksumFSInputChecker.<init>(ChecksumFileSystem.java:125)
+	at org.apache.hadoop.fs.ChecksumFileSystem.open(ChecksumFileSystem.java:283)
+	at org.apache.hadoop.fs.FileSystem.open(FileSystem.java:427)
+	at org.apache.hadoop.mapreduce.lib.input.LineRecordReader.initialize(LineRecordReader.java:75)
+	at org.apache.hadoop.mapred.MapTask$NewTrackingRecordReader.initialize(MapTask.java:522)
+	at org.apache.hadoop.mapred.MapTask.runNewMapper(MapTask.java:763)
+	at org.apache.hadoop.mapred.MapTask.run(MapTask.java:370)
+	at org.apache.hadoop.mapred.Child$4.run(Child.java:255)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:396)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1149)
+	at org.apache.hadoop.mapred.Child.main(Child.java:249)
+
+14/10/18 10:09:15 INFO mapred.JobClient: Task Id : attempt_201410181754_0003_m_000003_0, Status : FAILED
+java.io.FileNotFoundException: File file:/D:/WorkSpace/MyEclipseProjects/Hadoop/input/test1.txt does not exist.
+	at org.apache.hadoop.fs.RawLocalFileSystem.getFileStatus(RawLocalFileSystem.java:397)
+	at org.apache.hadoop.fs.FilterFileSystem.getFileStatus(FilterFileSystem.java:251)
+	at org.apache.hadoop.fs.ChecksumFileSystem$ChecksumFSInputChecker.<init>(ChecksumFileSystem.java:125)
+	at org.apache.hadoop.fs.ChecksumFileSystem.open(ChecksumFileSystem.java:283)
+	at org.apache.hadoop.fs.FileSystem.open(FileSystem.java:427)
+	at org.apache.hadoop.mapreduce.lib.input.LineRecordReader.initialize(LineRecordReader.java:75)
+	at org.apache.hadoop.mapred.MapTask$NewTrackingRecordReader.initialize(MapTask.java:522)
+	at org.apache.hadoop.mapred.MapTask.runNewMapper(MapTask.java:763)
+	at org.apache.hadoop.mapred.MapTask.run(MapTask.java:370)
+	at org.apache.hadoop.mapred.Child$4.run(Child.java:255)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:396)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1149)
+	at org.apache.hadoop.mapred.Child.main(Child.java:249)
+
+14/10/18 10:12:27 INFO input.FileInputFormat: Total input paths to process : 2
+14/10/18 10:12:27 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+14/10/18 10:12:27 WARN snappy.LoadSnappy: Snappy native library not loaded
+14/10/18 10:12:27 INFO mapred.JobClient: Running job: job_201410181754_0004
+14/10/18 10:12:28 INFO mapred.JobClient:  map 0% reduce 0%
+14/10/18 10:12:32 INFO mapred.JobClient:  map 100% reduce 0%
+14/10/18 10:12:39 INFO mapred.JobClient:  map 100% reduce 33%
+14/10/18 10:12:40 INFO mapred.JobClient:  map 100% reduce 100%
+14/10/18 10:12:40 INFO mapred.JobClient: Job complete: job_201410181754_0004
+14/10/18 10:12:40 INFO mapred.JobClient: Counters: 29
+14/10/18 10:12:40 INFO mapred.JobClient:   Job Counters 
+14/10/18 10:12:40 INFO mapred.JobClient:     Launched reduce tasks=1
+14/10/18 10:12:40 INFO mapred.JobClient:     SLOTS_MILLIS_MAPS=4614
+14/10/18 10:12:40 INFO mapred.JobClient:     Total time spent by all reduces waiting after reserving slots (ms)=0
+14/10/18 10:12:40 INFO mapred.JobClient:     Total time spent by all maps waiting after reserving slots (ms)=0
+14/10/18 10:12:40 INFO mapred.JobClient:     Launched map tasks=2
+14/10/18 10:12:40 INFO mapred.JobClient:     Data-local map tasks=2
+14/10/18 10:12:40 INFO mapred.JobClient:     SLOTS_MILLIS_REDUCES=8329
+14/10/18 10:12:40 INFO mapred.JobClient:   File Output Format Counters 
+14/10/18 10:12:40 INFO mapred.JobClient:     Bytes Written=31
+14/10/18 10:12:40 INFO mapred.JobClient:   FileSystemCounters
+14/10/18 10:12:40 INFO mapred.JobClient:     FILE_BYTES_READ=75
+14/10/18 10:12:40 INFO mapred.JobClient:     HDFS_BYTES_READ=264
+14/10/18 10:12:40 INFO mapred.JobClient:     FILE_BYTES_WRITTEN=154204
+14/10/18 10:12:40 INFO mapred.JobClient:     HDFS_BYTES_WRITTEN=31
+14/10/18 10:12:40 INFO mapred.JobClient:   File Input Format Counters 
+14/10/18 10:12:40 INFO mapred.JobClient:     Bytes Read=44
+14/10/18 10:12:40 INFO mapred.JobClient:   Map-Reduce Framework
+14/10/18 10:12:40 INFO mapred.JobClient:     Map output materialized bytes=81
+14/10/18 10:12:40 INFO mapred.JobClient:     Map input records=2
+14/10/18 10:12:40 INFO mapred.JobClient:     Reduce shuffle bytes=81
+14/10/18 10:12:40 INFO mapred.JobClient:     Spilled Records=12
+14/10/18 10:12:40 INFO mapred.JobClient:     Map output bytes=78
+14/10/18 10:12:40 INFO mapred.JobClient:     CPU time spent (ms)=1090
+14/10/18 10:12:40 INFO mapred.JobClient:     Total committed heap usage (bytes)=241246208
+14/10/18 10:12:40 INFO mapred.JobClient:     Combine input records=8
+14/10/18 10:12:40 INFO mapred.JobClient:     SPLIT_RAW_BYTES=220
+14/10/18 10:12:40 INFO mapred.JobClient:     Reduce input records=6
+14/10/18 10:12:40 INFO mapred.JobClient:     Reduce input groups=4
+14/10/18 10:12:40 INFO mapred.JobClient:     Combine output records=6
+14/10/18 10:12:40 INFO mapred.JobClient:     Physical memory (bytes) snapshot=311574528
+14/10/18 10:12:40 INFO mapred.JobClient:     Reduce output records=4
+14/10/18 10:12:40 INFO mapred.JobClient:     Virtual memory (bytes) snapshot=1034760192
+14/10/18 10:12:40 INFO mapred.JobClient:     Map output records=8
+14/10/30 16:22:36 INFO mapred.JobClient: Cleaning up the staging area hdfs://master:9000/usr/hadoop/tmp/mapred/staging/hadoop/.staging/job_201410302335_0002
+14/10/30 16:22:39 ERROR security.UserGroupInformation: PriviledgedActionException as:hadoop cause:org.apache.hadoop.mapred.FileAlreadyExistsException: Output directory hdfs://master:9000/usr/hadoop/newout1 already exists
+Exception in thread "main" org.apache.hadoop.mapred.FileAlreadyExistsException: Output directory hdfs://master:9000/usr/hadoop/newout1 already exists
+	at org.apache.hadoop.mapreduce.lib.output.FileOutputFormat.checkOutputSpecs(FileOutputFormat.java:137)
+	at org.apache.hadoop.mapred.JobClient$2.run(JobClient.java:949)
+	at org.apache.hadoop.mapred.JobClient$2.run(JobClient.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:415)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1149)
+	at org.apache.hadoop.mapred.JobClient.submitJobInternal(JobClient.java:912)
+	at org.apache.hadoop.mapreduce.Job.submit(Job.java:500)
+	at org.apache.hadoop.mapreduce.Job.waitForCompletion(Job.java:530)
+	at com.guilin.hadoop.mapreduce.WordCount.main(WordCount.java:73)
+14/11/07 10:58:04 INFO input.FileInputFormat: Total input paths to process : 2
+14/11/07 10:58:04 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+14/11/07 10:58:04 WARN snappy.LoadSnappy: Snappy native library not loaded
+14/11/07 10:58:05 INFO mapred.JobClient: Running job: job_201411071746_0004
+14/11/07 10:58:06 INFO mapred.JobClient:  map 0% reduce 0%
+14/11/07 10:58:11 INFO mapred.JobClient:  map 50% reduce 0%
+14/11/07 10:58:13 INFO mapred.JobClient:  map 100% reduce 0%
+14/11/07 10:58:18 INFO mapred.JobClient:  map 100% reduce 33%
+14/11/07 10:58:20 INFO mapred.JobClient:  map 100% reduce 100%
+14/11/07 10:58:20 INFO mapred.JobClient: Job complete: job_201411071746_0004
+14/11/07 10:58:20 INFO mapred.JobClient: Counters: 29
+14/11/07 10:58:20 INFO mapred.JobClient:   Job Counters 
+14/11/07 10:58:20 INFO mapred.JobClient:     Launched reduce tasks=1
+14/11/07 10:58:20 INFO mapred.JobClient:     SLOTS_MILLIS_MAPS=6109
+14/11/07 10:58:20 INFO mapred.JobClient:     Total time spent by all reduces waiting after reserving slots (ms)=0
+14/11/07 10:58:20 INFO mapred.JobClient:     Total time spent by all maps waiting after reserving slots (ms)=0
+14/11/07 10:58:20 INFO mapred.JobClient:     Launched map tasks=2
+14/11/07 10:58:20 INFO mapred.JobClient:     Data-local map tasks=2
+14/11/07 10:58:20 INFO mapred.JobClient:     SLOTS_MILLIS_REDUCES=8423
+14/11/07 10:58:20 INFO mapred.JobClient:   File Output Format Counters 
+14/11/07 10:58:20 INFO mapred.JobClient:     Bytes Written=31
+14/11/07 10:58:20 INFO mapred.JobClient:   FileSystemCounters
+14/11/07 10:58:20 INFO mapred.JobClient:     FILE_BYTES_READ=75
+14/11/07 10:58:20 INFO mapred.JobClient:     HDFS_BYTES_READ=264
+14/11/07 10:58:20 INFO mapred.JobClient:     FILE_BYTES_WRITTEN=154204
+14/11/07 10:58:20 INFO mapred.JobClient:     HDFS_BYTES_WRITTEN=31
+14/11/07 10:58:20 INFO mapred.JobClient:   File Input Format Counters 
+14/11/07 10:58:20 INFO mapred.JobClient:     Bytes Read=44
+14/11/07 10:58:20 INFO mapred.JobClient:   Map-Reduce Framework
+14/11/07 10:58:20 INFO mapred.JobClient:     Map output materialized bytes=81
+14/11/07 10:58:20 INFO mapred.JobClient:     Map input records=2
+14/11/07 10:58:20 INFO mapred.JobClient:     Reduce shuffle bytes=81
+14/11/07 10:58:20 INFO mapred.JobClient:     Spilled Records=12
+14/11/07 10:58:20 INFO mapred.JobClient:     Map output bytes=78
+14/11/07 10:58:20 INFO mapred.JobClient:     CPU time spent (ms)=1870
+14/11/07 10:58:20 INFO mapred.JobClient:     Total committed heap usage (bytes)=290136064
+14/11/07 10:58:20 INFO mapred.JobClient:     Combine input records=8
+14/11/07 10:58:20 INFO mapred.JobClient:     SPLIT_RAW_BYTES=220
+14/11/07 10:58:20 INFO mapred.JobClient:     Reduce input records=6
+14/11/07 10:58:20 INFO mapred.JobClient:     Reduce input groups=4
+14/11/07 10:58:20 INFO mapred.JobClient:     Combine output records=6
+14/11/07 10:58:20 INFO mapred.JobClient:     Physical memory (bytes) snapshot=313110528
+14/11/07 10:58:20 INFO mapred.JobClient:     Reduce output records=4
+14/11/07 10:58:20 INFO mapred.JobClient:     Virtual memory (bytes) snapshot=1034833920
+14/11/07 10:58:20 INFO mapred.JobClient:     Map output records=8
+Exception in thread "main" org.apache.hadoop.ipc.RemoteException: Server IPC version 9 cannot communicate with client version 4
+	at org.apache.hadoop.ipc.Client.call(Client.java:1107)
+	at org.apache.hadoop.ipc.RPC$Invoker.invoke(RPC.java:230)
+	at com.sun.proxy.$Proxy1.getProtocolVersion(Unknown Source)
+	at org.apache.hadoop.ipc.RPC.getProxy(RPC.java:411)
+	at org.apache.hadoop.hdfs.DFSClient.createRPCNamenode(DFSClient.java:135)
+	at org.apache.hadoop.hdfs.DFSClient.<init>(DFSClient.java:276)
+	at org.apache.hadoop.hdfs.DFSClient.<init>(DFSClient.java:241)
+	at org.apache.hadoop.hdfs.DistributedFileSystem.initialize(DistributedFileSystem.java:100)
+	at org.apache.hadoop.fs.FileSystem.createFileSystem(FileSystem.java:1411)
+	at org.apache.hadoop.fs.FileSystem.access$0(FileSystem.java:1403)
+	at org.apache.hadoop.fs.FileSystem$Cache.get(FileSystem.java:1429)
+	at org.apache.hadoop.fs.FileSystem.get(FileSystem.java:254)
+	at org.apache.hadoop.fs.Path.getFileSystem(Path.java:187)
+	at org.apache.hadoop.mapreduce.lib.input.FileInputFormat.addInputPath(FileInputFormat.java:372)
+	at com.guilin.hadoop.mapreduce.WordCount.main(WordCount.java:71)
